@@ -2,13 +2,13 @@ export class Init {
 	public load()
 	{
 		const todos = localStorage.getItem('todos');
-		if(todos === null || todos == undefined) this.init();
+		if(todos === null || todos == undefined) this.init(null);
 		else console.log('todos found');
 	}
 
-	private init()
+	public init(_todos)
 	{
-		const todos =  [{
+		const todos =  _todos || [{
 	  		text: "Paspoort verlengen"
 	  	}, 
 	  	{

@@ -15,4 +15,9 @@ export class TodoService extends Init {
   	return JSON.parse(localStorage.getItem('todos'));
   }
 
+  setTodos(todos)
+  {
+  	this.init(todos);
+  }
+
 }

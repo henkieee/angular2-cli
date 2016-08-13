@@ -21,12 +21,14 @@ export class TodosComponent implements OnInit {
   	this.todos.push({
   		text: this.text
   	});
+  	this._todoService.setTodos(this.todos);
   	this.text = "";
   }
   deleteTodo(todoText)
   {
-     this.todos = this.todos
-     				.filter(item => item.text !== todoText);
+  	console.log(todoText);
+   	this.todos = this.todos.filter(item => item.text !== todoText)  
+	this._todoService.setTodos(this.todos);
   }
 
 }
