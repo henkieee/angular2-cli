@@ -17,4 +17,10 @@ describe('App: NinjaDirectory', () => {
     inject([AppComponent], (app: AppComponent) => {
       expect(app.title).toEqual('app works!');
     }));
+
+   it('just testing', 
+    inject([AppComponent], (app: AppComponent) => {
+      expect(app.name).toEqual('Henk!!');
+    })
+   );
 });
